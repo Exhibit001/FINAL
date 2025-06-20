@@ -16,7 +16,7 @@
       position: absolute;
       width: 220px;
       height: 140px;
-      background: url('/burst.png') no-repeat center;
+      background: url('burst.png') no-repeat center;
       background-size: contain;
       display: flex;
       align-items: center;
@@ -73,7 +73,7 @@
 
     .video-block video {
       width: 100%;
-      border: 2px solid black;
+      display: block;
     }
 
     @media (max-width: 700px) {
@@ -96,18 +96,25 @@
 </head>
 <body>
 
-  <!-- Labels -->
+  <!-- Starburst Labels -->
   <div class="burst-label" id="exhibit-label">EXHIBIT<br>001</div>
   <div class="burst-label" id="madeby-label">MADE<br>BY S!CK</div>
   <div class="burst-label" id="click-label">CLICK PANTS<br>FOR INFO</div>
 
   <!-- Video Grid -->
   <div class="grid">
-    <!-- Repeat this block for each pair -->
+    <!-- Example: Add more blocks just like this -->
     <div class="video-block">
       <h2>STYLE 001</h2>
-      <video src="your-video-path.mp4" autoplay muted loop playsinline></video>
+      <video src="001.mp4" autoplay muted loop playsinline></video>
     </div>
+
+    <div class="video-block">
+      <h2>STYLE 002</h2>
+      <video src="002.mp4" autoplay muted loop playsinline></video>
+    </div>
+
+    <!-- Add more below -->
   </div>
 
 </body>
