@@ -12,40 +12,43 @@
       font-family: 'Acme', sans-serif;
     }
 
-    .burst {
+    .burst-label {
       position: absolute;
-      padding: 20px;
-      background: white;
-      clip-path: polygon(
-        50% 0%, 61% 35%, 98% 35%, 68% 57%,
-        79% 91%, 50% 70%, 21% 91%, 32% 57%,
-        2% 35%, 39% 35%
-      );
+      width: 220px;
+      height: 140px;
+      background: url('/burst.png') no-repeat center;
+      background-size: contain;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
       font-size: 1.5rem;
       font-weight: bold;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      color: black;
     }
 
-    .burst#title {
+    #exhibit-label {
       top: 30px;
       left: 20px;
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
 
-    .burst#madeby {
+    #madeby-label {
       top: 30px;
       right: 20px;
     }
 
-    .burst#clickinfo {
-      top: 150px;
+    #click-label {
+      top: 160px;
       left: 50%;
       transform: translateX(-50%);
+      font-size: 1.2rem;
+      width: 180px;
+      height: 120px;
     }
 
     .grid {
-      margin-top: 250px;
+      margin-top: 280px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -56,7 +59,6 @@
     .video-block {
       width: 45%;
       text-align: center;
-      position: relative;
       transition: transform 0.2s ease;
     }
 
@@ -67,7 +69,6 @@
     .video-block h2 {
       margin-bottom: 10px;
       font-size: 1.2rem;
-      font-weight: bold;
     }
 
     .video-block video {
@@ -80,29 +81,34 @@
         width: 100%;
       }
 
-      .burst {
+      .burst-label {
+        width: 180px;
+        height: 120px;
         font-size: 1.1rem;
-        padding: 15px;
       }
 
-      .burst#title {
-        font-size: 1.6rem;
+      #exhibit-label {
+        font-size: 1.5rem;
+        width: 200px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="burst" id="title">EXHIBIT<br>001</div>
-  <div class="burst" id="madeby">MADE<br>BY S!CK</div>
-  <div class="burst" id="clickinfo">CLICK PANTS<br>FOR INFO</div>
 
+  <!-- Labels -->
+  <div class="burst-label" id="exhibit-label">EXHIBIT<br>001</div>
+  <div class="burst-label" id="madeby-label">MADE<br>BY S!CK</div>
+  <div class="burst-label" id="click-label">CLICK PANTS<br>FOR INFO</div>
+
+  <!-- Video Grid -->
   <div class="grid">
-    <!-- Example video block (just copy and paste this 16x) -->
+    <!-- Repeat this block for each pair -->
     <div class="video-block">
       <h2>STYLE 001</h2>
-      <video src="path-to-your-video.mp4" autoplay muted loop playsinline></video>
+      <video src="your-video-path.mp4" autoplay muted loop playsinline></video>
     </div>
-    <!-- more blocks... -->
   </div>
+
 </body>
 </html>
