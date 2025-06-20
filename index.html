@@ -11,7 +11,7 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://exhibit001.com" />
   <meta property="og:title" content="EXHIBIT001 by S!CK">
-  <meta property="og:description" content="A handmade fashion archive. Drop 001. NYC street posters.">
+  <meta property="og:description" content="Explore the handmade fashion archive. S!CK presents: EXHIBIT001.">
   <meta property="og:image" content="https://exhibit001.com/cover.jpg">
   <meta property="og:url" content="https://exhibit001.com">
   <meta property="og:type" content="website">
@@ -68,23 +68,28 @@
       margin: 30px 20px 10px;
     }
 
-    .preview-section {
-      margin: 40px 0;
-      font-size: 1.3rem;
+    .video-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 20px;
     }
 
-    .jean-placeholder {
-      width: 90%;
-      max-width: 600px;
-      height: 400px;
-      background-color: #ccc;
-      border: 2px dashed black;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 20px auto;
-      font-size: 1.5rem;
-      font-weight: bold;
+    .video-block {
+      width: 45%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .video-block h2 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .video-block video {
+      width: 100%;
+      border: 2px solid black;
     }
 
     footer {
@@ -115,9 +120,12 @@
         font-size: 1.4rem;
       }
 
-      .jean-placeholder {
-        height: 250px;
-        font-size: 1.2rem;
+      .video-block {
+        width: 100%;
+      }
+
+      .video-block video {
+        height: auto;
       }
     }
   </style>
@@ -142,13 +150,31 @@
 
   <div class="click-info">CLICK ON PANTS FOR INFO</div>
 
-  <div class="preview-section">
-    Drop 001 preview:
-    <div class="jean-placeholder">
-      JEANS LOADING...
+  <!-- 🔥 VIDEO GRID START -->
+  <div class="video-grid">
+    <div class="video-block">
+      <h2>STYLE 001.1</h2>
+      <video src="001.1.mp4" autoplay muted loop playsinline></video>
     </div>
-    <p>Full archive drops soon. Stay locked.</p>
+    <div class="video-block">
+      <h2>STYLE 001.2</h2>
+      <video src="001.2.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="video-block">
+      <h2>STYLE 001.3</h2>
+      <video src="001.3.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="video-block">
+      <h2>STYLE 001.4</h2>
+      <video src="001.4.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="video-block">
+      <h2>STYLE 001.5</h2>
+      <video src="001.5.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <!-- Add more blocks as needed -->
   </div>
+  <!-- 🔥 VIDEO GRID END -->
 
   <footer>
     If you searched for <strong>Exhibit001</strong>, you're in the right place. This is the official archive by S!CK.
