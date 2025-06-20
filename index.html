@@ -1,159 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Meta -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EXHIBIT001 | Handmade Archive by S!CK</title>
-  <meta name="description" content="EXHIBIT001 is a fashion archive by S!CK, showcasing handmade, one-of-a-kind jeans and garments. Click each piece to learn more." />
-  <meta name="keywords" content="EXHIBIT001, S!CK, handmade fashion, custom jeans, fashion archive, exclusive drop, one of one, streetwear" />
-  <meta name="author" content="S!CK" />
-  <link rel="canonical" href="https://exhibit001.com/" />
-
-  <!-- Open Graph Meta -->
-  <meta property="og:title" content="EXHIBIT001 by S!CK" />
-  <meta property="og:description" content="Explore the fashion archive of custom handmade jeans. Each piece is a message." />
-  <meta property="og:image" content="https://exhibit001.com/cover.jpg" />
-  <meta property="og:url" content="https://exhibit001.com/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" />
-
-  <!-- Fonts -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EXHIBIT001</title>
   <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet" />
-
-  <!-- Preload Burst Image -->
-  <link rel="preload" as="image" href="burst.png" />
-
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       background-color: #f2e9e2;
       font-family: 'Acme', sans-serif;
-    }
-
-    .burst-label {
-      position: absolute;
-      background: url('burst.png') no-repeat center;
-      background-size: contain;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       text-align: center;
-      font-weight: bold;
-      color: black;
-      line-height: 1.2;
     }
 
-    #exhibit-label {
-      width: 350px;
-      height: 250px;
-      top: -40px;
-      left: -60px;
-      font-size: 2.5rem;
+    h1 {
+      font-size: 4rem;
+      margin-top: 40px;
     }
 
-    #madeby-label {
-      width: 240px;
-      height: 160px;
-      top: 20px;
-      right: -30px;
-      font-size: 1.4rem;
+    .underline {
+      width: 300px;
+      height: 10px;
+      background-color: black;
+      margin: 10px auto 30px;
     }
 
-    #click-label {
-      width: 220px;
-      height: 150px;
-      top: 200px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 1.1rem;
-    }
-
-    .grid {
-      margin-top: 330px;
+    .made-strip {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .video-block {
-      width: 45%;
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
-
-    .video-block:hover {
-      transform: scale(1.02);
-    }
-
-    .video-block h2 {
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-    }
-
-    .video-block video {
+      background-color: black;
       width: 100%;
-      display: block;
-      border: none;
-      outline: none;
-      background-color: transparent;
+    }
+
+    .made-box {
+      flex: 1 0 200px; /* Always minimum 200px wide, wraps if needed */
+      text-align: center;
+      color: white;
+      padding: 20px 0;
+      font-size: 1.8rem;
+      font-weight: bold;
+      border-left: 1px solid #444;
+    }
+
+    .made-box:first-child {
+      border-left: none;
+    }
+
+    .click-info {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 40px 20px;
     }
 
     @media (max-width: 700px) {
-      .video-block {
-        width: 100%;
+      h1 {
+        font-size: 3rem;
       }
 
-      #exhibit-label {
-        width: 280px;
-        height: 200px;
-        font-size: 2rem;
-        top: -30px;
-        left: -40px;
+      .made-box {
+        font-size: 1.4rem;
       }
 
-      #madeby-label {
-        width: 200px;
-        height: 140px;
-        font-size: 1.2rem;
-      }
-
-      #click-label {
-        width: 180px;
-        height: 130px;
-        font-size: 1rem;
+      .click-info {
+        font-size: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Burst Headings -->
-  <div class="burst-label" id="exhibit-label">EXHIBIT<br>001</div>
-  <div class="burst-label" id="madeby-label">MADE<br>BY S!CK</div>
-  <div class="burst-label" id="click-label">CLICK PANTS<br>FOR INFO</div>
+  <h1>EXHIBIT001</h1>
+  <div class="underline"></div>
 
-  <!-- Video Grid -->
-  <div class="grid">
-    <!-- Repeat as needed, lazy loaded -->
-    <div class="video-block">
-      <h2>STYLE 001</h2>
-      <video src="001.mp4" autoplay muted loop playsinline loading="lazy"></video>
-    </div>
-
-    <div class="video-block">
-      <h2>STYLE 002</h2>
-      <video src="002.mp4" autoplay muted loop playsinline loading="lazy"></video>
-    </div>
+  <!-- Infinite MADE BY S!CK strip -->
+  <div class="made-strip">
+    <!-- Repeat as many as you want -->
+    <div class="made-box">MADE BY<br>S!CK</div>
+    <div class="made-box">MADE BY<br>S!CK</div>
+    <div class="made-box">MADE BY<br>S!CK</div>
+    <div class="made-box">MADE BY<br>S!CK</div>
+    <div class="made-box">MADE BY<br>S!CK</div>
+    <div class="made-box">MADE BY<br>S!CK</div>
+    <div class="made-box">MADE BY<br>S!CK</div>
+    <div class="made-box">MADE BY<br>S!CK</div>
   </div>
+
+  <div class="click-info">CLICK ON PANTS FOR INFO</div>
 
 </body>
 </html>
