@@ -3,8 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EXHIBIT001</title>
+  <title>EXHIBIT001 | Handmade Archive by S!CK</title>
+
+  <!-- SEO META -->
+  <meta name="description" content="EXHIBIT001 is a handmade fashion archive by S!CK — exclusive jeans, drop coming soon.">
+  <meta name="keywords" content="exhibit001, exhibit 001, sick fashion, handmade jeans, archive fashion, streetwear, S!CK, fashion drop, nyc posters">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://exhibit001.com" />
+  <meta property="og:title" content="EXHIBIT001 by S!CK">
+  <meta property="og:description" content="A handmade fashion archive. Drop 001. NYC street posters.">
+  <meta property="og:image" content="https://exhibit001.com/cover.jpg">
+  <meta property="og:url" content="https://exhibit001.com">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet" />
+
   <style>
     body {
       margin: 0;
@@ -15,14 +28,14 @@
 
     h1 {
       font-size: 4rem;
-      margin-top: 40px;
+      margin: 30px 0 10px;
     }
 
     .underline {
       width: 300px;
       height: 10px;
       background-color: black;
-      margin: 10px auto 30px;
+      margin: 0 auto 20px;
     }
 
     .made-strip {
@@ -38,9 +51,10 @@
       flex: 1;
       text-align: center;
       color: white;
-      padding: 20px 0;
-      font-size: 1.8rem;
+      padding: 10px 0;
+      font-size: clamp(1.5rem, 1.8vw, 1.8rem);
       font-weight: bold;
+      line-height: 1.2;
       border-left: 1px solid #444;
     }
 
@@ -51,10 +65,39 @@
     .click-info {
       font-size: 2rem;
       font-weight: bold;
-      margin: 40px 20px;
+      margin: 30px 20px 10px;
     }
 
-    /* Hide extra boxes on mobile */
+    .preview-section {
+      margin: 40px 0;
+      font-size: 1.3rem;
+    }
+
+    .jean-placeholder {
+      width: 90%;
+      max-width: 600px;
+      height: 400px;
+      background-color: #ccc;
+      border: 2px dashed black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    footer {
+      margin: 50px 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .invisible-seo {
+      font-size: 1px;
+      opacity: 0;
+    }
+
     @media (max-width: 700px) {
       .made-box:nth-child(n+4) {
         display: none;
@@ -65,21 +108,26 @@
       }
 
       .made-box {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
       }
 
       .click-info {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+      }
+
+      .jean-placeholder {
+        height: 250px;
+        font-size: 1.2rem;
       }
     }
   </style>
 </head>
+
 <body>
 
   <h1>EXHIBIT001</h1>
   <div class="underline"></div>
 
-  <!-- Show 10 on desktop, only 3 on mobile -->
   <div class="made-strip">
     <div class="made-box">MADE BY<br>S!CK</div>
     <div class="made-box">MADE BY<br>S!CK</div>
@@ -93,6 +141,23 @@
   </div>
 
   <div class="click-info">CLICK ON PANTS FOR INFO</div>
+
+  <div class="preview-section">
+    Drop 001 preview:
+    <div class="jean-placeholder">
+      JEANS LOADING...
+    </div>
+    <p>Full archive drops soon. Stay locked.</p>
+  </div>
+
+  <footer>
+    If you searched for <strong>Exhibit001</strong>, you're in the right place. This is the official archive by S!CK.
+  </footer>
+
+  <p class="invisible-seo">
+    Exhibit001 is a handmade fashion archive by S!CK. Visit https://exhibit001.com.
+    If you're searching for Exhibit001 on Google, this is the official site.
+  </p>
 
 </body>
 </html>
