@@ -27,13 +27,15 @@
 
     .made-strip {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      justify-content: space-between;
       background-color: black;
       width: 100%;
+      overflow: hidden;
     }
 
     .made-box {
-      flex: 1 0 200px; /* Always minimum 200px wide, wraps if needed */
+      flex: 1;
       text-align: center;
       color: white;
       padding: 20px 0;
@@ -52,13 +54,18 @@
       margin: 40px 20px;
     }
 
+    /* Hide extra boxes on mobile */
     @media (max-width: 700px) {
+      .made-box:nth-child(n+4) {
+        display: none;
+      }
+
       h1 {
         font-size: 3rem;
       }
 
       .made-box {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
       }
 
       .click-info {
@@ -72,9 +79,10 @@
   <h1>EXHIBIT001</h1>
   <div class="underline"></div>
 
-  <!-- Infinite MADE BY S!CK strip -->
+  <!-- Show 10 on desktop, only 3 on mobile -->
   <div class="made-strip">
-    <!-- Repeat as many as you want -->
+    <div class="made-box">MADE BY<br>S!CK</div>
+    <div class="made-box">MADE BY<br>S!CK</div>
     <div class="made-box">MADE BY<br>S!CK</div>
     <div class="made-box">MADE BY<br>S!CK</div>
     <div class="made-box">MADE BY<br>S!CK</div>
