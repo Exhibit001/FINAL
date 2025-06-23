@@ -11,7 +11,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'AW-17258756682');
 </script>
   <!-- SEO META -->
@@ -28,7 +27,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet" />
 
   <style>
- 
     body {
       margin: 0;
       background-color: #f2e9e2;
@@ -90,6 +88,7 @@
       width: 45%;
       max-width: 400px;
       text-align: center;
+      cursor: pointer;
     }
 
     .video-block h2 {
@@ -101,12 +100,12 @@
       width: 100%;
       border: 2px solid black;
     }
-footer {
-  margin: 50px 20px;
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: black;
-}
+
+    footer {
+      margin: 50px 20px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: black;
     }
 
     .invisible-seo {
@@ -114,29 +113,78 @@ footer {
       opacity: 0;
     }
 
+    /* Modal styling */
+    #info-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.7);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #info-modal .modal-content {
+      background: #fff;
+      padding: 32px 22px 24px 22px;
+      max-width: 350px;
+      border-radius: 12px;
+      position: relative;
+      text-align: left;
+      margin: 20px;
+      width: 90vw;
+    }
+
+    #info-modal button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 18px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    #info-modal h2 {
+      font-size: 1.3rem;
+      margin-top: 0;
+    }
+
+    #info-modal video {
+      width: 100%;
+      border: 2px solid black;
+      margin-bottom: 12px;
+    }
+
+    #info-modal p {
+      font-size: 1rem;
+      margin-top: 6px;
+    }
+
     @media (max-width: 700px) {
       .made-box:nth-child(n+4) {
         display: none;
       }
-
       h1 {
         font-size: 3rem;
       }
-
       .made-box {
         font-size: 1.4rem;
       }
-
       .click-info {
         font-size: 1.4rem;
       }
-
       .video-block {
         width: 100%;
       }
-
       .video-block video {
         height: auto;
+      }
+      #info-modal .modal-content {
+        max-width: 96vw;
       }
     }
   </style>
@@ -183,55 +231,65 @@ footer {
       <h2>STYLE 001.5</h2>
       <video src="001.5.mp4" autoplay muted loop playsinline></video>
     </div>
-<div class="video-grid">
-  <div class="video-block">
-    <h2>STYLE 001.6</h2>
-    <video src="001.6.mp4" autoplay muted loop playsinline></video>
   </div>
-  <div class="video-block">
-    <h2>STYLE 001.7</h2>
-    <video src="001.7.mp4" autoplay muted loop playsinline></video>
-  </div>
-  <div class="video-block">
-    <h2>STYLE 001.8</h2>
-    <video src="001.8.mp4" autoplay muted loop playsinline></video>
-  </div>
-  <div class="video-block">
-    <h2>STYLE 001.9</h2>
-    <video src="001.9.mp4" autoplay muted loop playsinline></video>
-  </div>
-  <div class="video-block">
-    <h2>STYLE 001.10</h2>
-    <video src="001.10.mp4" autoplay muted loop playsinline></video>
-  </div>
-  <div class="video-block">
-    <h2>STYLE 001.11</h2>
-    <video src="001.11.mp4" autoplay muted loop playsinline></video>
-  </div>
-  <div class="video-block">
-    <h2>STYLE 001.12</h2>
-    <video src="001.12.mp4" autoplay muted loop playsinline></video>
-  </div>
-  <div class="video-block">
-    <h2>STYLE 001.13</h2>
-    <video src="001.13.mp4" autoplay muted loop playsinline></video>
-  </div>
-  <div class="video-block">
-    <h2>STYLE 001.14</h2>
-    <video src="001.14.mp4" autoplay muted loop playsinline></video>
-  </div>
-  <div class="video-block">
-    <h2>STYLE 001.15</h2>
-    <video src="001.15.mp4" autoplay muted loop playsinline></video>
-  </div>
-  <div class="video-block">
-    <h2>STYLE 001.16</h2>
-    <video src="001.16.mp4" autoplay muted loop playsinline></video>
-  </div>
-</div>
-
+  <div class="video-grid">
+    <div class="video-block">
+      <h2>STYLE 001.6</h2>
+      <video src="001.6.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="video-block">
+      <h2>STYLE 001.7</h2>
+      <video src="001.7.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="video-block">
+      <h2>STYLE 001.8</h2>
+      <video src="001.8.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="video-block">
+      <h2>STYLE 001.9</h2>
+      <video src="001.9.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="video-block">
+      <h2>STYLE 001.10</h2>
+      <video src="001.10.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="video-block">
+      <h2>STYLE 001.11</h2>
+      <video src="001.11.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="video-block">
+      <h2>STYLE 001.12</h2>
+      <video src="001.12.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="video-block">
+      <h2>STYLE 001.13</h2>
+      <video src="001.13.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="video-block">
+      <h2>STYLE 001.14</h2>
+      <video src="001.14.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="video-block">
+      <h2>STYLE 001.15</h2>
+      <video src="001.15.mp4" autoplay muted loop playsinline></video>
+    </div>
+    <div class="video-block">
+      <h2>STYLE 001.16</h2>
+      <video src="001.16.mp4" autoplay muted loop playsinline></video>
+    </div>
   </div>
   <!-- 🔥 VIDEO GRID END -->
+
+  <!-- MODAL START -->
+  <div id="info-modal">
+    <div class="modal-content">
+      <button onclick="closeModal()">✕</button>
+      <h2 id="modal-title"></h2>
+      <video id="modal-video" src="" controls autoplay loop muted playsinline></video>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+  <!-- MODAL END -->
 
   <footer>
     If you searched for <strong>Exhibit001</strong>, you're in the right place. This is the official Exhibitiion by S!CK.
@@ -242,5 +300,63 @@ footer {
     If you're searching for Exhibit001 on Google, this is the official site.
   </p>
 
+  <script>
+    // Info for each style. You can edit desc for each!
+    const pantsInfo = [
+      {
+        title: "STYLE 001.1",
+        video: "001.1.mp4",
+        desc: "Handmade archival denim with patchwork and unique distressing.",
+      },
+      {
+        title: "STYLE 001.2",
+        video: "001.2.mp4",
+        desc: "Raw edge paneling, upcycled details, signature S!CK flair.",
+      },
+      {
+        title: "STYLE 001.3",
+        video: "001.3.mp4",
+        desc: "Faded wash with asymmetrical cut lines, part of the 001 series.",
+      },
+      { title: "STYLE 001.4", video: "001.4.mp4", desc: "Custom text for 001.4." },
+      { title: "STYLE 001.5", video: "001.5.mp4", desc: "Custom text for 001.5." },
+      { title: "STYLE 001.6", video: "001.6.mp4", desc: "Custom text for 001.6." },
+      { title: "STYLE 001.7", video: "001.7.mp4", desc: "Custom text for 001.7." },
+      { title: "STYLE 001.8", video: "001.8.mp4", desc: "Custom text for 001.8." },
+      { title: "STYLE 001.9", video: "001.9.mp4", desc: "Custom text for 001.9." },
+      { title: "STYLE 001.10", video: "001.10.mp4", desc: "Custom text for 001.10." },
+      { title: "STYLE 001.11", video: "001.11.mp4", desc: "Custom text for 001.11." },
+      { title: "STYLE 001.12", video: "001.12.mp4", desc: "Custom text for 001.12." },
+      { title: "STYLE 001.13", video: "001.13.mp4", desc: "Custom text for 001.13." },
+      { title: "STYLE 001.14", video: "001.14.mp4", desc: "Custom text for 001.14." },
+      { title: "STYLE 001.15", video: "001.15.mp4", desc: "Custom text for 001.15." },
+      { title: "STYLE 001.16", video: "001.16.mp4", desc: "Custom text for 001.16." },
+    ];
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get all video-blocks in display order (flatten both grids)
+      const allBlocks = document.querySelectorAll('.video-block');
+      allBlocks.forEach((block, idx) => {
+        block.style.cursor = "pointer";
+        block.onclick = function() {
+          showModal(idx);
+        };
+      });
+    });
+
+    function showModal(idx) {
+      const info = pantsInfo[idx];
+      document.getElementById('modal-title').textContent = info.title;
+      document.getElementById('modal-video').src = info.video;
+      document.getElementById('modal-desc').textContent = info.desc;
+      document.getElementById('info-modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('info-modal').style.display = 'none';
+      document.getElementById('modal-video').pause();
+      document.getElementById('modal-video').src = ""; // Reset for mobile autoplay fix
+    }
+  </script>
 </body>
 </html>
